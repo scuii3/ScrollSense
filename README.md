@@ -250,3 +250,14 @@ Berdasarkan hasil pengembangan model machine learning untuk prediksi risiko kete
 - Faktor yang paling memengaruhi tingkat ketergantungan media sosial adalah konflik akibat media sosial, kesehatan mental, durasi penggunaan media sosial, dan jam tidur.
 
 Dengan demikian, algoritma **Random Forest** dipilih sebagai model terbaik untuk digunakan pada sistem prediksi risiko ketergantungan media sosial mahasiswa yang telah dideploy melalui Hugging Face menggunakan aplikasi **ScrollSense**.
+
+
+## Deployment
+
+Model yang telah dikembangkan kemudian dideploy menggunakan Hugging Face Spaces dengan framework Gradio sehingga dapat digunakan secara interaktif melalui web.
+
+Link Deployment:
+https://huggingface.co/spaces/scuii/ScrollSense
+
+Link Repository:
+https://github.com/scuii3/ScrollSense
