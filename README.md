@@ -185,3 +185,68 @@ Logistic Regression digunakan sebagai model pembanding karena merupakan algoritm
 | Logistic Regression | 97.87% |
 
 Berdasarkan hasil evaluasi, Random Forest dipilih sebagai model terbaik karena memiliki akurasi tertinggi dan kemampuan generalisasi yang baik pada proses Cross Validation.
+
+## Evaluation
+
+### Hasil Cross Validation
+
+Untuk menguji kestabilan model, dilakukan proses Cross Validation sebanyak 5 fold menggunakan algoritma Random Forest.
+
+Hasil Cross Validation:
+
+| Fold | Accuracy |
+|------|----------|
+| Fold 1 | 95.04% |
+| Fold 2 | 93.62% |
+| Fold 3 | 99.29% |
+| Fold 4 | 100.00% |
+| Fold 5 | 93.62% |
+
+**Mean Cross Validation Score = 96.31%**
+
+Hasil tersebut menunjukkan bahwa model memiliki performa yang stabil pada berbagai pembagian data sehingga mampu melakukan generalisasi dengan baik terhadap data baru.
+
+---
+
+### Feature Importance
+
+Analisis Feature Importance dilakukan untuk mengetahui faktor yang paling berpengaruh terhadap tingkat risiko ketergantungan media sosial.
+
+10 fitur terpenting berdasarkan Random Forest:
+
+| Fitur | Importance |
+|--------|--------|
+| Conflicts_Over_Social_Media | 0.278295 |
+| Mental_Health_Score | 0.193981 |
+| Avg_Daily_Usage_Hours | 0.109737 |
+| Sleep_Hours_Per_Night | 0.102536 |
+| Affects_Academic_Performance_Yes | 0.036326 |
+| Country_Japan | 0.019421 |
+| Age | 0.016921 |
+| Most_Used_Platform_LinkedIn | 0.015452 |
+| Country_Switzerland | 0.014665 |
+| Relationship_Status_In Relationship | 0.014253 |
+
+Berdasarkan hasil tersebut, faktor yang paling berpengaruh terhadap tingkat ketergantungan media sosial adalah:
+
+1. Conflicts Over Social Media
+2. Mental Health Score
+3. Average Daily Usage Hours
+4. Sleep Hours Per Night
+
+Hal ini menunjukkan bahwa aspek perilaku penggunaan media sosial memiliki pengaruh yang lebih besar dibandingkan faktor demografis seperti usia atau negara.
+
+---
+
+## Kesimpulan
+
+Berdasarkan hasil pengembangan model machine learning untuk prediksi risiko ketergantungan media sosial mahasiswa, diperoleh kesimpulan sebagai berikut:
+
+- Dataset yang digunakan terdiri dari 705 data mahasiswa dengan 13 atribut.
+- Target klasifikasi dibagi menjadi tiga kategori risiko yaitu Rendah, Sedang, dan Tinggi berdasarkan nilai Addicted Score.
+- Dilakukan perbandingan tiga algoritma yaitu Decision Tree, Random Forest, dan Logistic Regression.
+- Random Forest dan Decision Tree memperoleh akurasi tertinggi sebesar **98.58%**, sedangkan Logistic Regression memperoleh akurasi **97.87%**.
+- Hasil Cross Validation menghasilkan rata-rata akurasi **96.31%** yang menunjukkan model cukup stabil.
+- Faktor yang paling memengaruhi tingkat ketergantungan media sosial adalah konflik akibat media sosial, kesehatan mental, durasi penggunaan media sosial, dan jam tidur.
+
+Dengan demikian, algoritma **Random Forest** dipilih sebagai model terbaik untuk digunakan pada sistem prediksi risiko ketergantungan media sosial mahasiswa yang telah dideploy melalui Hugging Face menggunakan aplikasi **ScrollSense**.
