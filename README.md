@@ -116,3 +116,44 @@ Heatmap korelasi digunakan untuk melihat hubungan antar fitur numerik, yaitu:
 - Addicted_Score
 
 Hasil analisis korelasi membantu memahami fitur-fitur yang memiliki hubungan terhadap tingkat ketergantungan media sosial.
+
+## Data Preparation
+
+Tahap Data Preparation dilakukan untuk mempersiapkan data sebelum digunakan dalam proses pelatihan model machine learning.
+
+### Feature Engineering
+
+Karena dataset asli tidak memiliki label tingkat risiko ketergantungan media sosial, dibuat variabel target baru yaitu Risk_Level berdasarkan nilai Addicted_Score dengan kategori:
+
+- Rendah : Addicted_Score ≤ 4
+- Sedang : Addicted_Score > 4 dan ≤ 7
+- Tinggi : Addicted_Score > 7
+
+### Pemisahan Fitur dan Target
+
+Fitur (X) dan target (y) dipisahkan untuk keperluan proses pelatihan model.
+
+Kolom yang tidak digunakan dalam pemodelan:
+
+- Student_ID
+- Addicted_Score
+- Risk_Level (sebagai target)
+
+### Encoding Data Kategorikal
+
+Data kategorikal dikonversi menjadi data numerik menggunakan One Hot Encoding melalui fungsi `pd.get_dummies()` agar dapat diproses oleh algoritma machine learning.
+
+### Train Test Split
+
+Dataset dibagi menjadi data latih dan data uji menggunakan rasio:
+
+- Data latih : 80%
+- Data uji : 20%
+
+Pembagian dilakukan menggunakan `train_test_split()` dengan parameter:
+
+- test_size = 0.2
+- random_state = 42
+- stratify = y
+
+Penggunaan stratify bertujuan untuk menjaga proporsi kelas pada data latih dan data uji tetap seimbang.
