@@ -88,3 +88,31 @@ Kategori risiko dibentuk menggunakan aturan berikut:
 - Tinggi : Addicted_Score > 7
 
 Variabel Risk_Level kemudian digunakan sebagai target pada proses klasifikasi machine learning.
+
+## Exploratory Data Analysis (EDA)
+
+Pada tahap Exploratory Data Analysis (EDA), dilakukan analisis untuk memahami karakteristik data dan hubungan antar variabel yang digunakan dalam proses pemodelan.
+
+### Distribusi Tingkat Risiko
+
+Visualisasi distribusi Risk_Level dilakukan untuk melihat persebaran jumlah data pada masing-masing kategori risiko ketergantungan media sosial, yaitu Rendah, Sedang, dan Tinggi.
+
+### Distribusi Durasi Penggunaan Media Sosial
+
+Distribusi Avg_Daily_Usage_Hours dianalisis menggunakan histogram untuk mengetahui pola penggunaan media sosial mahasiswa setiap harinya.
+
+### Distribusi Mental Health Score
+
+Analisis terhadap Mental_Health_Score dilakukan untuk melihat persebaran kondisi kesehatan mental responden pada dataset.
+
+### Analisis Korelasi
+
+Heatmap korelasi digunakan untuk melihat hubungan antar fitur numerik, yaitu:
+
+- Age
+- Avg_Daily_Usage_Hours
+- Sleep_Hours_Per_Night
+- Mental_Health_Score
+- Addicted_Score
+
+Hasil analisis korelasi membantu memahami fitur-fitur yang memiliki hubungan terhadap tingkat ketergantungan media sosial.
