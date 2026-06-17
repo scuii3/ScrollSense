@@ -157,3 +157,31 @@ Pembagian dilakukan menggunakan `train_test_split()` dengan parameter:
 - stratify = y
 
 Penggunaan stratify bertujuan untuk menjaga proporsi kelas pada data latih dan data uji tetap seimbang.
+
+## Modeling
+
+Pada tahap modeling dilakukan pelatihan dan perbandingan beberapa algoritma klasifikasi untuk menentukan model terbaik dalam memprediksi tingkat risiko ketergantungan media sosial.
+
+Algoritma yang digunakan yaitu:
+
+### 1. Decision Tree
+
+Decision Tree merupakan algoritma klasifikasi yang membangun struktur pohon keputusan berdasarkan fitur-fitur pada dataset. Algoritma ini dipilih karena mudah diinterpretasikan dan sering digunakan sebagai baseline model klasifikasi.
+
+### 2. Random Forest
+
+Random Forest merupakan pengembangan dari Decision Tree yang menggunakan banyak pohon keputusan (ensemble learning). Algoritma ini mampu mengurangi overfitting dan menghasilkan performa yang lebih stabil.
+
+### 3. Logistic Regression
+
+Logistic Regression digunakan sebagai model pembanding karena merupakan algoritma klasifikasi yang sederhana, cepat, dan umum digunakan pada berbagai permasalahan klasifikasi.
+
+### Hasil Perbandingan Model
+
+| Model | Accuracy |
+|---------|---------|
+| Decision Tree | 98.58% |
+| Random Forest | 98.58% |
+| Logistic Regression | 97.87% |
+
+Berdasarkan hasil evaluasi, Random Forest dipilih sebagai model terbaik karena memiliki akurasi tertinggi dan kemampuan generalisasi yang baik pada proses Cross Validation.
