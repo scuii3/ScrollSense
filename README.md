@@ -134,6 +134,9 @@ Validasi silang (*5-fold CV*) dilakukan untuk menguji kestabilan model.
 > ⭐ **Mean Cross Validation Score = 96.31%**  
 > *Model terbukti sangat stabil dan mampu melakukan generalisasi dengan baik terhadap data baru.*
 
+### Confusion Matrix
+Selain menggunakan metrik akurasi, performa model juga dievaluasi menggunakan *Confusion Matrix* untuk melihat detail klasifikasi pada masing-masing kelas target (Rendah, Sedang, Tinggi). Hasil evaluasi menunjukkan model mampu mengklasifikasikan hampir seluruh data uji dengan benar, dengan tingkat *False Positive* dan *False Negative* yang sangat minim.
+
 ### 🔑 Feature Importance
 Faktor apa yang paling mendorong risiko ketergantungan? Berikut 10 fitur teratas:
 
