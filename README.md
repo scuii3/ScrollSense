@@ -1,7 +1,7 @@
 # 📱 Laporan Proyek Machine Learning: ScrollSense
 **Prediksi Risiko Ketergantungan Media Sosial Berdasarkan Pola Aktivitas Digital Pengguna**
 
-> 👤 **Nama:** Try Suci Wulandari  
+> 👤 **Nama:** Trysuci Wulandari  
 > 🎓 **NIM:** 2330511099  
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/scuii/ScrollSense)
@@ -134,7 +134,10 @@ Validasi silang (*5-fold CV*) dilakukan untuk menguji kestabilan model.
 > ⭐ **Mean Cross Validation Score = 96.31%**  
 > *Model terbukti sangat stabil dan mampu melakukan generalisasi dengan baik terhadap data baru.*
 
-### Confusion Matrix
+### 🧩 Confusion Matrix
+
+![Grafik Confusion Matrix](cm.png)
+
 Selain menggunakan metrik akurasi, performa model juga dievaluasi menggunakan *Confusion Matrix* untuk melihat detail klasifikasi pada masing-masing kelas target (Rendah, Sedang, Tinggi). Hasil evaluasi menunjukkan model mampu mengklasifikasikan hampir seluruh data uji dengan benar, dengan tingkat *False Positive* dan *False Negative* yang sangat minim.
 
 ### 🔑 Feature Importance
